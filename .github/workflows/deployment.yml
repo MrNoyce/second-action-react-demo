@@ -1,5 +1,6 @@
 name: Deploy Project
-on: push
+# adding multiple triggers to workflow
+on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -31,4 +32,4 @@ jobs:
       - name: Build project
         run: npm run build
       - name: Deploy
-        run: echo 'DEPLOYING'
+        run: echo 'DEPLOYING....'
